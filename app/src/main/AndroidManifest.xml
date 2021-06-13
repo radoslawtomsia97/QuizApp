@@ -13,6 +13,9 @@
         <activity android:name=".QuizQuestionsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Design.NoActionBar"></activity>
+        <activity android:name=".Zwierzeta"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Design.NoActionBar"></activity>
         <activity
             android:name=".Rejestracja"
             android:configChanges="orientation|screenSize">
