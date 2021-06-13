@@ -14,7 +14,6 @@ import kotlinx.android.synthetic.main.activity_quiz_questions.*
 class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
     private var mCurrentPosition: Int = 1 // Default and the first question position
     private var mQuestionsList: ArrayList<Question>? = null
-
     private var mSelectedOptionPosition: Int = 0
     private var mCorrectAnswers: Int = 0
 

@@ -27,6 +27,7 @@ class ResultActivity : AppCompatActivity() {
 
         btn_finish.setOnClickListener {
             startActivity(Intent(this@ResultActivity, MainActivity::class.java))
+            finish()
         }
         // END
     }

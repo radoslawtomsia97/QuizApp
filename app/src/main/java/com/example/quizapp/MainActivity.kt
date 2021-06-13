@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this@MainActivity, QuizQuestionsActivity::class.java)
 
             startActivity(intent)
-
+            finish()
 
         }
 
@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 
             startActivity(intent2)
 
-
+            finish()
         }
 
         btn_auta.setOnClickListener {
@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
 
             startActivity(intent3)
 
-
+            finish()
         }
 
         btn_Loga.setOnClickListener {
@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
 
             startActivity(intent4)
 
-
+            finish()
         }
     }
 }
