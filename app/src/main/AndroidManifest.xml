@@ -16,6 +16,12 @@
         <activity android:name=".Zwierzeta"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Design.NoActionBar"></activity>
+        <activity android:name=".auta"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Design.NoActionBar"></activity>
+        <activity android:name=".Loga"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Design.NoActionBar"></activity>
         <activity
             android:name=".Rejestracja"
             android:configChanges="orientation|screenSize">

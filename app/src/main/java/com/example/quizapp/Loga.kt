@@ -11,9 +11,9 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.activity_quiz_questions.*
 
-class Zwierzeta : AppCompatActivity(), View.OnClickListener {
+class Loga : AppCompatActivity(), View.OnClickListener {
     private var mCurrentPosition: Int = 1 // Default and the first question position
-    private var mQuestionsZwierzeta: ArrayList<Question>? = null
+    private var mQuestionsLoga: ArrayList<Question>? = null
 
     private var mSelectedOptionPosition: Int = 0
     private var mCorrectAnswers: Int = 0
@@ -33,7 +33,8 @@ class Zwierzeta : AppCompatActivity(), View.OnClickListener {
 
         // END
 
-        mQuestionsZwierzeta = Constants.getQuestions2()
+        mQuestionsLoga = Constants.getQuestions4()
+
 
         setQuestion()
 
@@ -76,7 +77,7 @@ class Zwierzeta : AppCompatActivity(), View.OnClickListener {
 
                     when {
 
-                        mCurrentPosition <= mQuestionsZwierzeta!!.size -> {
+                        mCurrentPosition <= mQuestionsLoga!!.size -> {
 
                             setQuestion()
                         }
@@ -85,17 +86,17 @@ class Zwierzeta : AppCompatActivity(), View.OnClickListener {
                             // TODO (STEP 5: Now remove the toast message and launch the result screen which we have created and also pass the user name and score details to it.)
                             // START
                             val intent =
-                                    Intent(this@Zwierzeta, ResultActivity::class.java)
+                                    Intent(this@Loga, ResultActivity::class.java)
 
                             intent.putExtra(Constants.CORRECT_ANSWERS, mCorrectAnswers)
-                            intent.putExtra(Constants.TOTAL_QUESTIONS, mQuestionsZwierzeta!!.size)
+                            intent.putExtra(Constants.TOTAL_QUESTIONS, mQuestionsLoga!!.size)
                             startActivity(intent)
                             finish()
                             // END
                         }
                     }
                 } else {
-                    val question = mQuestionsZwierzeta?.get(mCurrentPosition - 1)
+                    val question = mQuestionsLoga?.get(mCurrentPosition - 1)
 
                     // This is to check if the answer is wrong
                     if (question!!.correctAnswer != mSelectedOptionPosition) {
@@ -108,7 +109,7 @@ class Zwierzeta : AppCompatActivity(), View.OnClickListener {
                     // This is for correct answer
                     answerView(question.correctAnswer, R.drawable.correct_option_border_bg)
 
-                    if (mCurrentPosition == mQuestionsZwierzeta!!.size) {
+                    if (mCurrentPosition == mQuestionsLoga!!.size) {
                         btn_submit.text = "Koniec"
                     } else {
                         btn_submit.text = "Kolejne pytanie"
@@ -125,11 +126,11 @@ class Zwierzeta : AppCompatActivity(), View.OnClickListener {
      */
     private fun setQuestion() {
 
-        val question = mQuestionsZwierzeta!!.get(mCurrentPosition - 1) // Getting the question from the list with the help of current position.
+        val question = mQuestionsLoga!!.get(mCurrentPosition - 1) // Getting the question from the list with the help of current position.
 
         defaultOptionsView()
 
-        if (mCurrentPosition == mQuestionsZwierzeta!!.size) {
+        if (mCurrentPosition == mQuestionsLoga!!.size) {
             btn_submit.text = "Koniec"
         } else {
             btn_submit.text = "Zatwierdz"
@@ -160,7 +161,7 @@ class Zwierzeta : AppCompatActivity(), View.OnClickListener {
         )
         tv.setTypeface(tv.typeface, Typeface.BOLD)
         tv.background = ContextCompat.getDrawable(
-                this@Zwierzeta,
+                this@Loga,
                 R.drawable.selected_option_border_bg
         )
     }
@@ -180,7 +181,7 @@ class Zwierzeta : AppCompatActivity(), View.OnClickListener {
             option.setTextColor(Color.parseColor("#7A8089"))
             option.typeface = Typeface.DEFAULT
             option.background = ContextCompat.getDrawable(
-                    this@Zwierzeta,
+                    this@Loga,
                     R.drawable.default_option_border_bg
             )
         }
@@ -195,25 +196,25 @@ class Zwierzeta : AppCompatActivity(), View.OnClickListener {
 
             1 -> {
                 tv_option_one.background = ContextCompat.getDrawable(
-                        this@Zwierzeta,
+                        this@Loga,
                         drawableView
                 )
             }
             2 -> {
                 tv_option_two.background = ContextCompat.getDrawable(
-                        this@Zwierzeta,
+                        this@Loga,
                         drawableView
                 )
             }
             3 -> {
                 tv_option_three.background = ContextCompat.getDrawable(
-                        this@Zwierzeta,
+                        this@Loga,
                         drawableView
                 )
             }
             4 -> {
                 tv_option_four.background = ContextCompat.getDrawable(
-                        this@Zwierzeta,
+                        this@Loga,
                         drawableView
                 )
             }

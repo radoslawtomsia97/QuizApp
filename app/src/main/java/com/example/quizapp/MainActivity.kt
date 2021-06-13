@@ -15,16 +15,41 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // To hide the status bar.
-        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
+
 
         btn_flagi.setOnClickListener {
 
             val intent = Intent(this@MainActivity, QuizQuestionsActivity::class.java)
 
-
-
             startActivity(intent)
-            finish()
+
+
+        }
+
+        btn_Zwierzeta.setOnClickListener {
+
+            val intent2 = Intent(this@MainActivity, Zwierzeta::class.java)
+
+            startActivity(intent2)
+
+
+        }
+
+        btn_auta.setOnClickListener {
+
+            val intent3 = Intent(this@MainActivity, auta::class.java)
+
+            startActivity(intent3)
+
+
+        }
+
+        btn_Loga.setOnClickListener {
+
+            val intent4 = Intent(this@MainActivity, Loga::class.java)
+
+            startActivity(intent4)
+
 
         }
     }
