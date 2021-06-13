@@ -22,4 +22,14 @@
         android:text="Flagi"
         android:textColor="@android:color/white"
         android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btn_Zwierzeta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Zwierzeta"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_flagi"
+        tools:layout_editor_absoluteX="28dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

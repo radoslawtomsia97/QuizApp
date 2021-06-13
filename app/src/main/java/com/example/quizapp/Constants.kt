@@ -106,6 +106,26 @@ object Constants{
 
         questionsList.add(que10)
 
+        // 11
+        val que11 = Question(
+                10, "Do jakiego państwa należy ta flaga?",
+                R.drawable.ic_flag_of_kuwait,
+                "Kuwait", "Jordan",
+                "Sudan", "Palestyna", 1
+        )
+
+        questionsList.add(que10)
+
+        // 12
+        val que12 = Question(
+                10, "Do jakiego państwa należy ta flaga?",
+                R.drawable.ic_flag_of_kuwait,
+                "Kuwait", "Jordan",
+                "Sudan", "Palestyna", 1
+        )
+
+        questionsList.add(que10)
+
         return questionsList
     }
 }
